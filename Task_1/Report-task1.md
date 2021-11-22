@@ -73,10 +73,10 @@
         + r: quyền đọc file  
         + w: quyền ghi/ sửa đổi file  
 - Ngoài các quyền được ký hiệu bằng chũ như x,w,r thì Linux cũng đinh nghĩa các quyền của 1 file theo những số:  
-        + 1:  thực thi
-        + 2:  ghi
-        + 4:  đọc
-        + 7 = 4 + 2 + 1: tất cả mọi quyề
+        + 1:  thực thi  
+        + 2:  ghi  
+        + 4:  đọc  
+        + 7 = 4 + 2 + 1: tất cả mọi quyền  
 - Các quyền về người dùng: Linux phân chia người dùng thành 3 nhóm và ta có thể thay đổi quyền quyền thực của file theo từng nhóm:  
         + user  
         + group  
@@ -138,8 +138,11 @@
 ![bmon](images/13.1_bmon.png)  
   * vnstat:  
   * Vào file /etc/vnstat.conf để cấu hình card mạng trước khi sử dụng  
-![vnstat](images/13.2_vnstat_config.png)
-![vnstat](images/13.2_vnstat_result.png)
+![vnstat](images/13.2_vnstat_config.png)  
+![vnstat](images/13.2_vnstat_result.png)  
+## 14. nmap, telnet, ping, ssh, transfer files from local to public host
+
+
 
 
 
