@@ -14,7 +14,7 @@
 ##    3.  Xem cpu, ram, network:  
 ###     3.1 CPU:  
             
-
+    
   * - Xem thông tin của CPU: cat file /proc/cpuinfo  
 ![check cpu by file in Linux](images/3.1_cpu_check_file.png)   
             
@@ -140,7 +140,46 @@
   * Vào file /etc/vnstat.conf để cấu hình card mạng trước khi sử dụng  
 ![vnstat](images/13.2_vnstat_config.png)  
 ![vnstat](images/13.2_vnstat_result.png)  
-## 14. nmap, telnet, ping, ssh, transfer files from local to public host
+## 14. nmap, telnet, ping, ssh, transfer files from local to public host (máy ảo thay thế có ip local: 192.168.1.131)  
+### 14.1    nmap: nmap là công dụng dùng để scan các remote host để thu thập được các thông tin như: port đang lắng nghe, phiên bản OS, phần mềm, .....  
+-   Cú pháp chung: nmap [option] [target IP]  
+-   Các option hay đươc sư dụng trên nmap:  
+            + sA: TCP Ack Scan để scan các chế độ của firewall (statefull hay stateless), filter những port nào, ...  
+![nmap sA](images/nmap_sA.png)  
+            + A: scan agressive => dễ bị phát hiện  
+![nmap A](images/nmap_A.png)  
+            + sP: scan những server nào đang hoạt động  
+![nmap sP](images/nmap_sP.png)  
+            + sV: scan các phien bản của những phần mềm được sử dụng ở máy target  
+![nmap sV](images/nmap_sV.png)  
+
+### 14.2    telnet: là implementation của giao thức telnet, dùng để kết nối remote vào máy khác  
+- Cú pháp: telnet [IP's target] [port's target]  
+![telet](images/telnet.png)  
+
+### 14.3     ssh: là implementation của giao thức ssh và là phiên bản nâng cấp của telnet dùng để kết nối remote đến máy khác một cách bảo mật  
+- Cú pháp: ssh usename@ip_target  
+![ssh](images/ssh.png)  
+
+### 14.4 ping: dựa tren trên giao thức ICMP để kiếm tra kết nôi giữa 2 thiết bị đầu cuối  
+- Cú pháp: ping [ip's target]  
+![ping](images/ping.png)   
+
+### 14.5 scp: dựa trên giao thức ssh để implement việc truyền file giữa 2 máy tính 1 cách an toàn   
+- Cú pháp: scp [option] [source] username@ip_target:destinaion    
+![scp](images/scp.png)   
+
+### 14.5 Generate SSH Key:   
+- ssh-keygen: là công cụ để sinh ra 1 cặp key cho SSH  
+- Cú pháp: ssh-keygen để tạp cặp publi-priate key trên máy client  
+![ssh key gen](images/gen_ssh_client.png)  
+- Gửi public key cho server:   
+- Cú pháp: ssh-copy-id -i [file key public] user@ip-address  
+![ssh key gen result](images/gen_ssh_key.png)  
+- Kết nối ssh sử dụng ssh-keygen:  
+![ssh key gen result](images/gen_ssh_result.png)
+
+
 
 
 
