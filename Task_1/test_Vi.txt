@@ -1,9 +1,1 @@
-đây là file test được tạo ra
-thử sử dụng trình soạn thảo văn bản vi
-Thêm nội dung vào cuối file sử dung lệnh echo 
-aaaa
-aaaa
-aaaa
-aaaa
-aaaa
-aaaa
+FPTU HCM
