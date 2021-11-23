@@ -380,8 +380,17 @@ wc -L: prints độ dài của dòng dài nhất trong một file.
 - Khi ký hiệu < tên tệp được thêm vào cuối lệnh, đầu vào của lệnh được đọc từ tên tệp đã chỉ định. Ký hiệu < được gọi là toán tử chuyển hướng đầu vào  
 - Ngoài đầu vào tiêu chuẩn và đầu ra tiêu chuẩn, các lệnh thường tạo ra các loại đầu ra khác, chẳng hạn như thông báo lỗi hoặc trạng thái được gọi là đầu ra chuẩn đoán. Giống như Standard Output, Standard Error được ghi vào màn hình trừ khi nó được chuyển hướng  
 
-## 21.  /dev/null
-  
+## 21.  /dev/null  
+- “/dev/null” là một file thiết bị ảo  
+-  Đối với các chương trình có liên quan, chúng được coi như những file thực sự. Các tiện ích có thể yêu cầu dữ liệu từ loại nguồn này và hệ điều hành sẽ cung cấp dữ liệu cho chúng. Nhưng, thay vì đọc từ ổ đĩa, hệ điều hành sẽ tạo ra dữ liệu này một cách linh hoạt. Ví dụ về một file như vậy chính là “/dev/zero”  
+- Bất cứ điều gì bạn ghi vào “/dev/null”, đều bị loại bỏ và lãng quên  
+
+
+#           ~~THE END~~
+
+
+
+
 
 
 
