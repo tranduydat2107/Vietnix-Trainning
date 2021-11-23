@@ -325,7 +325,7 @@
         
         + -m: prints số kí tự trong một file. 
 
-wc -L: prints độ dài của dòng dài nhất trong một file.
+        + -L: prints độ dài của dòng dài nhất trong một file.
 
 ![wc](images/18.13_wc.png)  
 
@@ -386,7 +386,7 @@ wc -L: prints độ dài của dòng dài nhất trong một file.
 - Bất cứ điều gì bạn ghi vào “/dev/null”, đều bị loại bỏ và lãng quên  
 
 
-#           ~~THE END~~
+#            -- THE END --
 
 
 
