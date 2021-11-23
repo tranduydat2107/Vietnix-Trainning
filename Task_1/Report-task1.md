@@ -1,5 +1,35 @@
 # Trainning Vietnix first task    
 
+![header](images/header1.png)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##    1. Xem dung lượng đĩa:  
 ###     1.1 df -ha  
 ![check disk space in Linux](images/1_disk_check.png)  
@@ -155,29 +185,132 @@
 
 ### 14.2    telnet: là implementation của giao thức telnet, dùng để kết nối remote vào máy khác  
 - Cú pháp: telnet [IP's target] [port's target]  
+- 
 ![telet](images/telnet.png)  
 
 ### 14.3     ssh: là implementation của giao thức ssh và là phiên bản nâng cấp của telnet dùng để kết nối remote đến máy khác một cách bảo mật  
 - Cú pháp: ssh usename@ip_target  
+- 
 ![ssh](images/ssh.png)  
 
 ### 14.4 ping: dựa tren trên giao thức ICMP để kiếm tra kết nôi giữa 2 thiết bị đầu cuối  
 - Cú pháp: ping [ip's target]  
+- 
 ![ping](images/ping.png)   
 
 ### 14.5 scp: dựa trên giao thức ssh để implement việc truyền file giữa 2 máy tính 1 cách an toàn   
+
 - Cú pháp: scp [option] [source] username@ip_target:destinaion    
 ![scp](images/scp.png)   
 
-### 14.5 Generate SSH Key:   
+## 15 Generate SSH Key:   
 - ssh-keygen: là công cụ để sinh ra 1 cặp key cho SSH  
 - Cú pháp: ssh-keygen để tạp cặp publi-priate key trên máy client  
+- 
 ![ssh key gen](images/gen_ssh_client.png)  
 - Gửi public key cho server:   
 - Cú pháp: ssh-copy-id -i [file key public] user@ip-address  
+- 
 ![ssh key gen result](images/gen_ssh_key.png)  
 - Kết nối ssh sử dụng ssh-keygen:  
-![ssh key gen result](images/gen_ssh_result.png)
+- 
+![ssh key gen result](images/gen_ssh_result.png)  
+
+## 16. Xem nội dung của file mà không cần sử dụng editor  
+- cat: xem tất cả nội dung file  
+- tail: xem những n dòng cuối của file(mặc định là 10)  
+- head: xem những n dòng đầu cảu file(mặc định là 10)  
+- less: mở một tệp để đọc tương tác, cho phép di chuyển lên xuống và tìm kiếm  
+- more: dùng mở một tệp để đọc tương tác, cho phép di chuyển lên xuống và tìm kiếm  
+- Lưu ý: Điểm khác biệt giữa less và more là less cho phép cuộn ngược lên các trang dữ liệu đã đọc, còn more thì chỉ có thể đọc từ đầu tới cuối. Lệnh less có thể dùng phím mũi tên trên bàn phím để scroll lên xuống, lệnh more không có chức năng này   
+- Cú pháp:  
+        + cat [filename]  
+        + tail [filename]  
+        + head [filename]  
+        + less [filename]
+        + more [filename]  
+
+![view without eitor](images/15_view_without_editor.png)  
+
+## 17. Đổ nội dung 1 chuỗi vào cuối file  
+- Sử dụn lênh ehco: echo "nội dung" >> [filename]  
+       
+![add content to an end of a file](images/17_echo.png)  
+
+## 18. Những lệnh cơ bản trên Linux  
+
+###     18.1 grep: sử dụng như 1 pipeline để tìm kiếm  
+            - Cú pháp: grep [option] [regex-pattern] [filename]  
+            - 
+![grep](images/18.1_grep.png)       
+
+###     18.2 awk: là một ngôn ngữ lập trình thông dịch, được thiết kế đặc biệt để xử lý văn bản  
+- Cú pháp: awk [POSIX or GNU style options] -f progfile [--] file ...  
+
+![awk](images/18.2_awk.png)  
+
+###     18.3 sed: là một trình biên soạn văn bản thực hiện những thao tác chỉnh sửa đối với dữ liệu đến từ một đầu vào chuẩn hoặc một file text  
+- Cú pháp cơ bản của lệnh sed: sed [option] commands [file-to-edit]  
+
+![sed](images/18.3_sed.png)  
+
+###     18.4 tr: là một tiện ích được sử dụng để dịch, xóa các ký tự  
+-  Cú pháp cơ bản của lệnh tr:  tr [option] [set1] [set2]  , trong đó  
+        + set1: Liệt kê các ký tự trong văn bản phải được thay thế hoặc loại bỏ  
+        + set2: Liệt kê các ký tự sẽ được thay thế cho các ký tự liệt kê trong set1   
+- Thay thế những chữ abcdefgihjk từ thường sang hoa:
+
+![tr](images/18.4_tr.png)  
+
+###     18.5 sort: được sử dụng để sắp xếp các dòng của tệp văn bản  
+- Cú pháp của lện sort:  sort [option] [file]  
+- Option -r đê sắp xép theo thứ tự ngược lại  
+
+![sort](images/18.5_sort.png)  
+
+###     18.6 uniq: dùng để bỏ các dòng liên tiếp trùng lặp trong một tệp văn bản   
+- Cú pháp cơ bản của lệnh uniq: uniq [filename]  
+- Lưu ý: Lệnh uniq yêu cầu các dòng trùng lặp phải liên tiếp, nên chúng ta thường chạy sắp xếp trước, sau đó mới chuyển đầu ra thành uniq  
+
+![uniq](images/18.6_uniq.png)    
+
+###     18.7 cut: được sử dụng thao tác với tệp dựa trên cột và được thiết kế để trích xuất các cột cụ thể
+- Cú pháp cơ bản của lệnh cut: cut [option] [filename]  
+- Cắt trong fle từ cột 1-16  
+![cut](images/18.7_cut.png)  
+
+###     18.8 join: Để thực hiện việc phép nối giữa các file  
+- Cú pháp cơ bản của lệnh join: join [file1] [file2]  
+![join](images/18.8_join.png)  
+
+###     18.9 diff: so sánh các file theo dòng  
+- Cú pháp cơ bản của lệnh diff: diff [file1] [file2]   
+![diff](images/18.9_diff.png)  
+
+###     18.10 xargs: là lệnh  được sử dụng để build và execute các lệnh từ đầu vào tiêu chuẩn   
+- Cú pháp cơ bản của lệnh xargs:  xargs [options] [command [initial-arguments]]
+- Các option của lệnh xargs:  
+            -0 : input items are terminated by null character instead of white spaces  
+            -a file : read items from file instead of standard input  
+            –delimiter = delim : input items are terminated by a special character  
+            -E eof-str : set the end of file string to eof-str  
+            -I replace-str : replace occurrences of replace-str in the initial arguments with names read from standard input  
+            -L max-lines : use at-most max-lines non-blank input lines per command line.  
+            -p : prompt the user about whether to run each command line and read a line from terminal.  
+            -r : If the standard input does not contain any nonblanks, do not run the command  
+            -x : exit if the size is exceeded.  
+            –help : print the summary of options to xargs and exit  
+            –version : print the version no. of xargs and exit  
+
+
+
+
+
+
+
+
+
+
 
 
 
