@@ -1,6 +1,6 @@
 # Trainning Vietnix first task    
 
-![header](images/header1.png)  
+    ![header](images/header1.png)  
 
 
 
@@ -315,7 +315,7 @@
 ![pkill](images/18.12_pkill.png)  
 
 ### 18.13 wc: dược sử dụng để tìm kiếm thông tin về số lượng dòng, số lượng từ, byte hoặc số lượng kí tự của 1 file hoặc 1 biến có nội dung  
-- Cú pháp cơ bản của lệnh wc:  wc [options] filenames  
+- Cú pháp cơ bản của lệnh wc:  wc [options] [filename]  
 - Các option của lệnh wc:  
         + -l: prints số dòng trong một file. 
         
