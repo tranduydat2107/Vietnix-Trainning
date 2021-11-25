@@ -145,7 +145,7 @@
 - Tạo user wordpressuser1 có mật khẩu 123456 sử dụng lệnh: CREATE USER wordpressuser1@local IDENTIFIED BY '123456';  
 - Để user vừa tạo có quyền ghi, đọc, tạo bảng,....  trên database wordpress thì ta tiến hành phân quyền sử dụng lệnh:  GRANT ALL PRIVILEGES ON wordpres1.* TO wordpressuser1@localhost IDENTIFIED BY '123456';  
 
-![grant access to database](images/LEMP/user_db_wp.png)  
+![grant access to database](images/LEMP/user-db-wp.png)  
 
 ###     2.3 Cài PHP và các extension cần thiết để chạy wordpres   
 -  Cài các dependencies cần thiết để dụng nginx như 1 web server   
