@@ -128,3 +128,34 @@
 - Trang chính:  
 
 ![main wordpress](images/install-wp/main.png)    
+
+## 7. Cài Laravel  
+
+- Thêm các repo cần thiết để cài đặt Laravel:  
+    - rpm -Uvh https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-12.noarch.rpm  
+    - rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm  
+- Cài composer : 
+    - curl -sS https://getcomposer.org/installer | php  
+    - mv composer.phar /usr/bin/composer  
+    - chmod +x /usr/bin/composer  
+
+![install composer](images/Laravel/install-composer.png)    
+
+- Cài Laravel:  
+    - cd /var/www/  
+    - git clone https://github.com/laravel/laravel.git  
+
+![install laravel](images/Laravel/install-laravel.png)    
+
+- Sinh ra key mã hóa:  
+    - php artisan key:generate  
+
+![generate key laravel](images/Laravel/generate-key.png)    
+
+- Cấu hình virtual host:  
+    - Sử dụng gedit để thêm file cấu hình cho laravel: gedit /etc/httpd/conf.d/lavarel.conf  
+
+![generate config virtual host](images/Laravel/laravel-conf.png)    
+
+- Sủ dụng trình duyệt vào: http://dattran.com:8080/   
+![laravel](images/Laravel/main-page.png)  
