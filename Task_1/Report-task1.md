@@ -53,6 +53,9 @@
 ![check cpu architechture](images/3.2_cpu_check_architechture.png)  
 ###     3.2 RAM: sẽ sử dụng lệnh free kèm theo các tham số 
   * - Tham số -h sẽ cho ra kết quả dễ xem: free -h  
+  * - Dung lượng RAM còn dư:   
+    * - free: RAM còn dư, chưa được sư dụng  
+    * - available: ước lượng số RAM có thể sử dụng để chạy ứng dụng mới mà không cần sư dụng phân vùng swap  
 ![check RAM](images/3.2_ram_check.png)  
 
 ###     3.3 Network: sử dụng lệnh netstat để xem các kết nối mạng (có thể xem các kết nối tcp hoặc udp tùy theo tham số)  
@@ -62,7 +65,8 @@
 
 ##  4. Theo dõi chi tiết các tiến trình  
 - top: được sử dụng để theo dõi các tiến trình đang chạy(thời gian chạy, tổng số tiến trình đang chạy, tài nguyên được sử dụng, vd: RAM, CPU, Swap, lệnh để chạy, PID, ....)    
-![process monitor](images/4_process_monitor.png)  
+- load average: tải trung bình của CPU , là tổng số lượng process trung bình trong hàng chờ của CPU. Load avg thường được biểu diễn dưới dạng 3 con số, là trung bình trong 5-10-15 phút, thế hiện số process phải chờ CPU nhiều hay ít   
+![process monitor](images/4_process_monitor.png)   
 
 - Các thông tin liên quan đến CPU:  
 ![CPU infomation](images/4_cpu_info.png)
@@ -92,12 +96,19 @@
 ###     6.2 Copy file hoăc folder: cp  
 - cp [file_path] [copy_to_path]  
 ![copy a file](images/6.2_copy.png)
-###     6.3 Di chuyển file hoặc folder: mv  
+###     6.3 Di chuyển file hoặc folder: mv   
   * mv [old_path] [new_path]  
 ![copy a file](images/6.3_move_file.png)  
-- Lưu ý: lệnh mv cũng có thể dung để đổi tên 1 file hoặc 1 folder  
+- Lưu ý: lệnh mv cũng có thể dung để đổi tên 1 file hoặc 1 folder   
+- Những option thường đựoc sử dụng trong lệnh cp và mv:  
+    - -r: đệ quy, khi copy hoặc mv 1 folder có các file hoặc folder con ta dung dùng- r để thực ti trên các file hoặc folder con  
+    - -n: không ghi đè lên các file hoặc folder trùng trên đích (nếu trùng)  
+    - -i: ghi đè lên các file hoặc folder trùng trên đích (nếu trùng)  
+    - -p: duy trì chế độ tệp, quyền sở hữu và timestamp của file hay folder  
+    - -u: chỉ copy khi file source mới hơn file đich hoặc file đích không tồn tại   
 ## 7. Phân quyền  
-- Sử dụng lệnh chmod kèm theo các tham số để thực hiện phân quyền  
+- Sử dụng lệnh chmod kèm theo các tham số để thực hiện phân quyền   
+- Quyền mặc định cho file và folder là 664 và 755.  
 - Các quyền về file trong Linux:  
         + x: quyền thực thi(đối với các file runable)  
         + r: quyền đọc file  
