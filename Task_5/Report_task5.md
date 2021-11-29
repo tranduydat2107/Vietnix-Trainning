@@ -6,7 +6,7 @@
 - IPtables là ứng dụng tường lửa miễn phí trong Linux, cho phép thiết lập các quy tắc riêng để kiểm soát truy cập, tăng tính bảo mật   
 - Sơ đồ mô tả luồng hoạt động của iptables:  
 
-![iptables diagram](img/iptable_diagram)  
+![iptables diagram](img/iptable_diagram.png)  
 
 
 ###  1.2 Các chain trong iptables: Chains được tạo ra với một số lượng nhất định ứng với mỗi Table, giúp lọc gói tin tại các điểm khác nhau  
